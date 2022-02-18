@@ -11,6 +11,10 @@ git clone https://github.com/renanorodrigues/docker-laravel.git
 ```
 3. Enter in the directory of the project and open the terminal
 
+4. Make sure to create a file named .env to input your database credentials
+  POSTGRES_PASSWORD for your password in PostgreSQL
+  POSTGRES_DB for the name of your database
+
 ### Build the image
 Now is necessary to execute this command to build the image for container PHP-Apache
 ```
