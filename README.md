@@ -1,0 +1,37 @@
+# Laravel and Apache with Docker
+
+## Instalation
+1. Install Docker in your machine:
+https://docs.docker.com/engine/install/ubuntu/
+
+2. Clone this repository:
+
+```
+git clone https://github.com/renanorodrigues/docker-laravel.git
+```
+3. Enter in the directory of the project and open the terminal
+
+### Build the image
+Now is necessary to execute this command to build the image for container PHP-Apache
+```
+docker-compose build
+```
+When the process is over, make sure to stop all container
+```
+docker-compose down
+```
+
+### Create the project Laravel
+It's necessary to run one command in terminal's container PHP to create the project in dir src.
+So execute the bash in container PHP:
+```
+docker-compose exec php-apache /bin/bash
+```
+Finally, run the commando to create the project:
+```
+composer create-project laravel/laravel .
+```
+
+### Localhost
+Click in this link to view your project:  
+http://localhost:8080/
