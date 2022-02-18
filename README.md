@@ -18,11 +18,7 @@ git clone https://github.com/renanorodrigues/docker-laravel.git
 ### Build the image
 Now is necessary to execute this command to build the image for container PHP-Apache
 ```
-docker-compose build
-```
-When the process is over, make sure to stop all container
-```
-docker-compose down
+docker-compose up -d --build
 ```
 
 ### Create the project Laravel
@@ -31,7 +27,7 @@ So execute the bash in container PHP:
 ```
 docker-compose exec php-apache /bin/bash
 ```
-Finally, run the commando to create the project:
+Finally, run the command to create the project:
 ```
 composer create-project laravel/laravel .
 ```
